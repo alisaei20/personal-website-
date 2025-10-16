@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional painter and graphic designer showcasing artistic portfolio and creative works">
+    <title>Alexandra Martinez - Painter & Graphic Designer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="brand-hand" data-i18n="brand.name">Alexandra Martinez</a>
+            </div>
+            <div class="nav-menu" id="nav-menu" aria-hidden="true">
+                <button class="nav-close" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Gallery</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+                <button id="lang-toggle-mobile" class="lang-toggle nav-link" aria-label="Toggle language" title="Toggle language">EN</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle" aria-label="Open menu" role="button" tabindex="0" aria-controls="nav-menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div> 
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-lightbox"></div>
+            <div class="hero-video">
+                <img src="asset/img/sunset-painting-1920-x-1080-wallpaper-sb3w3l5o7vhsrni2.jpg" alt="Artistic Background" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title" data-i18n-type="html">Where Art Meets <span class="highlight">Imagination</span></h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Professional Painter & Graphic Designer creating visual stories that inspire and captivate</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary" data-i18n="hero.viewGallery">View Gallery</a>
+                <a href="#about" class="btn btn-secondary" data-i18n="hero.aboutMe">About Me</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Featured Gallery Preview -->
+    <section class="featured-gallery">
+        <div class="container">
+            <h2 class="section-title" data-i18n="featured.title">Featured Works</h2>
+            <div class="gallery-preview">
+                <div class="gallery-item" data-category="painting">
+                    <img src="asset/img/digital-art-.png" alt="Ocean Dreams - Abstract Painting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="featured.item1.title">Ocean Dreams</h3>
+                        <p data-i18n="featured.item1.tech">Acrylic on Canvas</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="digital">
+                    <img src="asset/img/realism.jpg" alt="Digital Symphony - Digital Art" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="featured.item2.title">Digital Symphony</h3>
+                        <p data-i18n="featured.item2.tech">Digital Illustration</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sketch">
+                    <img src="asset/img/oil-painting1.webp" alt="Urban Portrait - Charcoal Sketch" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="featured.item3.title">Urban Portrait</h3>
+                        <p data-i18n="featured.item3.tech">Charcoal on Paper</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="gallery.title">Portfolio Gallery</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filters.all">All</button>
+                <button class="filter-btn" data-filter="Realism" data-i18n="filters.realism">Realism</button>
+                <button class="filter-btn" data-filter="digital" data-i18n="filters.digital">Digital Art</button>
+                <button class="filter-btn" data-filter="OilPainting" data-i18n="filters.oil">Oil Painting</button>
+                <button class="filter-btn" data-filter="Abstract" data-i18n="filters.abstract">Abstract</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <p id="lightbox-technique"></p>
+                <p id="lightbox-date"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="asset/img/painter.jpg" alt="Alexandra Martinez - Artist Portrait" loading="lazy">
+                    <div class="about-badge">
+                        <i class="fas fa-palette"></i>
+                        <span>Creative Visionary</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title" data-i18n="about.title">About the Artist</h2>
+                    <p class="about-intro" data-i18n="about.intro">Welcome to my creative world where every brushstroke tells a story and every design breathes life into imagination.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h3><i class="fas fa-graduation-cap"></i> <span data-i18n="about.education">Education</span></h3>
+                            <p data-i18n="about.education.text">Master of Fine Arts in Visual Arts, Rhode Island School of Design<br> Bachelor of Arts in Graphic Design, Parsons School of Design</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h3><i class="fas fa-award"></i> <span data-i18n="about.experience">Experience</span></h3>
+                            <p data-i18n="about.experience.text">15+ years of professional experience in both traditional and digital art, with works featured in galleries across the country and collaborations with major brands.</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h3><i class="fas fa-trophy"></i> <span data-i18n="about.recognition">Recognition</span></h3>
+                            <p data-i18n="about.recognition.text">Winner of the International Art Excellence Award 2023<br> Featured in Art & Design Magazine's "Rising Artists" issue</p>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="artist-quote">
+                        <p data-i18n="about.quote">"Art is not what you see, but what you make others see. Through my work, I strive to create visual experiences that connect people to emotions they never knew they had."</p>
+                        <cite data-i18n="about.quoteAuthor">— Alexandra Martinez</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="testimonials.title">What People Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonials.t1">"Alexandra's work is simply breathtaking. Her ability to capture emotion through color and form is unmatched. Working with her was an absolute pleasure."</p>
+                        <div class="testimonial-author">
+                            <img src="asset/img/sunset-painting-1920-x-1080-wallpaper-sb3w3l5o7vhsrni2.jpg" alt="Sarah Mitchell" loading="lazy">
+                            <div>
+                                <h4 data-i18n="testimonials.t1_name">Sarah Mitchell</h4>
+                                <span data-i18n="testimonials.t1_role">Gallery Director, Modern Art Gallery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonials.t2">"The digital illustrations Alexandra created for our brand campaign exceeded all expectations. Her creative vision brought our concepts to life in ways we never imagined."</p>
+                        <div class="testimonial-author">
+                            <img src="asset/img/sunset-painting-1920-x-1080-wallpaper-sb3w3l5o7vhsrni2.jpg" alt="John Davis" loading="lazy">
+                            <div>
+                                <h4 data-i18n="testimonials.t2_name">John Davis</h4>
+                                <span data-i18n="testimonials.t2_role">Creative Director, Design Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonials.t3">"As a collector, I've seen many artists' work, but Alexandra's paintings have a unique quality that speaks directly to the soul. Each piece tells a story."</p>
+                        <div class="testimonial-author">
+                            <img src="asset/img/sunset-painting-1920-x-1080-wallpaper-sb3w3l5o7vhsrni2.jpg" alt="Emily Liu" loading="lazy">
+                            <div>
+                                <h4 data-i18n="testimonials.t3_name">Emily Liu</h4>
+                                <span data-i18n="testimonials.t3_role">Art Collector</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-btn next" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title" data-i18n="contact.title">Let's Create Together</h2>
+                    <p class="contact-intro" data-i18n="contact.intro">Ready to bring your vision to life? I'd love to hear about your project and discuss how we can collaborate to create something extraordinary.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 data-i18n="contact.email">Email</h3>
+                                <p>alexandra@artiststudio.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3 data-i18n="contact.phone">Phone</h3>
+                                <p> +98 9933899413</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h3 data-i18n="contact.instagram">Instagram</h3>
+                                <p>@alexandra_artist</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <div>
+                                <h3 data-i18n="contact.linkedin">LinkedIn</h3>
+                                <p>Alexandra Martinez</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" data-i18n="form.name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" data-i18n="form.email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject" data-i18n="form.subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" data-i18n="form.message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="form.send">Send Message</button>
+                    </form>
+                    <div class="form-success" id="form-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 data-i18n="form.successTitle">Message Sent Successfully!</h3>
+                        <p data-i18n="form.successText">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple footer text -->
+    <p data-i18n="footer.copyright" style="text-align: center; margin: 2rem 0;">&copy; 2024 Alexandra Martinez. All rights reserved. | Designed with passion and creativity.</p>
+
+    
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

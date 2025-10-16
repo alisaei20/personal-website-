@@ -1,0 +1,22 @@
+# Gallery Images Required
+برای گالری به تصاویر زیر نیاز داریم:
+
+1. ocean-dreams.jpg (400x500) - Abstract painting
+2. digital-symphony.jpg (400x500) - Digital art
+3. urban-portrait.jpg (400x500) - Sketch/Portrait
+4. abstract-emotions.jpg (400x500) - Abstract painting
+5. cyber-garden.jpg (400x500) - Digital art
+6. nature-whisper.jpg (400x500) - Sketch/Landscape
+7. colorful-chaos.jpg (400x500) - Mixed media
+8. metropolitan-dreams.jpg (400x500) - Digital painting
+9. floral-fantasy.jpg (400x500) - Watercolor painting
+
+همچنین برای بخش About:
+10. artist-portrait.jpg (400x500) - Artist photo
+
+برای Testimonials:
+11. testimonial-1.jpg (60x60) - Client photo
+12. testimonial-2.jpg (60x60) - Client photo  
+13. testimonial-3.jpg (60x60) - Client photo
+
+تمام تصاویر باید در پوشه asset/img قرار گیرند.

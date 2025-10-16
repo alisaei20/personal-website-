@@ -13,10 +13,11 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'Condiment';
-    src: url('asset/fonts/Condiment-Regular.woff') format('woff');
-    font-weight: 700;
+    font-family: 'Vazirmatn';
+    src: url('asset/fonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -85,28 +86,29 @@ html {
 }
 
 body {
-    font-family: var(--font-secondary);
+    font-family: 'Vazirmatn', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--warm-cream);
     overflow-x: hidden;
 }
-/* Use Persian font for headings when lang=fa */
+/* Use Vazirmatn for all text elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+/* Use Lahzeh for headings when lang=fa */
 html[lang="fa"] h1,
 html[lang="fa"] h2,
 html[lang="fa"] h3,
 html[lang="fa"] h4,
 html[lang="fa"] h5,
 html[lang="fa"] h6 {
-    font-family: var(--font-farsi);
+    font-family: 'Lahzeh', sans-serif;
     font-weight: 700;
 }
 
-/* Use Vazirmatn for Persian body text (non-headings) */
-html[lang="fa"] body {
-    font-family: 'Vazirmatn', sans-serif;
-    font-weight: 400;
-}
+/* Body text uses Vazirmatn by default */
 
 /* RTL alignment for About section when Persian is active */
 html[lang="fa"] .about-section .about-text,
@@ -159,8 +161,8 @@ html[lang="fa"] .about-section .detail-item h3 i {
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary);
-    font-weight: 900;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -195,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-smooth);
     cursor: pointer;
     border: none;
-    font-family: var(--font-secondary);
+    font-family: 'Vazirmatn', sans-serif;
     font-size: 1rem;
     position: relative;
     overflow: hidden;
@@ -622,7 +624,7 @@ html[lang="fa"] .gallery-overlay p {
     border-radius: 25px;
     cursor: pointer;
     transition: var(--transition-smooth);
-    font-family: var(--font-secondary);
+    font-family: 'Vazirmatn', sans-serif;
     font-weight: 500;
 }
 
@@ -997,7 +999,7 @@ html[lang="fa"] .contact-intro {
     padding: 15px;
     border: 2px solid var(--warm-sand);
     border-radius: 10px;
-    font-family: var(--font-secondary);
+    font-family: 'Vazirmatn', sans-serif;
     font-size: 1rem;
     transition: var(--transition-smooth);
     background: transparent;
